@@ -1,0 +1,37 @@
+/*
+ * AI Challenge design tokens.
+ * Colors are stored as space-separated RGB channels so Tailwind can apply
+ * alpha modifiers (e.g. `bg-signal/10`). See tailwind.config.js.
+ */
+:root {
+  /* Base + layered surfaces */
+  --c-base: 7 8 12; /* #07080C */
+  --c-surface-1: 13 15 20; /* #0D0F14 */
+  --c-surface-2: 20 24 33; /* #141821 */
+  --c-surface-3: 28 33 48; /* #1C2130 */
+  --c-line: 38 44 59; /* #262C3B */
+
+  /* Text */
+  --c-ink: 232 236 244; /* #E8ECF4 */
+  --c-ink-muted: 154 163 184; /* #9AA3B8 */
+  --c-ink-faint: 122 132 154; /* #7A849A — ≥4.5:1 on base */
+
+  /* Accents: one electric primary, one warm secondary */
+  --c-signal: 65 232 245; /* #41E8F5 — primary / interactive */
+  --c-amber: 255 181 71; /* #FFB547 — secondary / telemetry, streaks */
+
+  /* State — used only for correct / incorrect */
+  --c-ok: 61 220 132; /* #3DDC84 */
+  --c-bad: 255 92 108; /* #FF5C6C */
+
+  /* Effects */
+  --glow-signal: 0 0 0 1px rgb(var(--c-signal) / 0.45), 0 0 28px -6px rgb(var(--c-signal) / 0.55);
+  --glow-amber: 0 0 0 1px rgb(var(--c-amber) / 0.45), 0 0 28px -6px rgb(var(--c-amber) / 0.5);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur-med: 320ms;
+}
